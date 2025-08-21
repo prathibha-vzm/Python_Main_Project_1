@@ -15,6 +15,8 @@ guvi_project/
 |   ├── sign_out.py            # Logout Functionality
 │   ├── signup_page.py         # Signup Page actions
 │
+|── screenshots               # Contains Screenshots taken during test run
+|
 ├──tests/
 ├── features/                # Feature files written in Gherkin
 │   ├── test_guvi.feature    # Covers the Test Verifies Page URl, Title and Navigate to Login Page and SignUp Page (Test cases 1-5)
@@ -27,6 +29,8 @@ guvi_project/
 │   ├── test_guvi_login.py   # Step definitions for login page
 │   └── test_menu_chatbot.py # Step definitions for menu/chatbot/logout
 │
+|── conftest.py              # contains pytest fixtures for driver, to read json data
+|── pytest.ini               # conatins marker and path for feature
 │── requirements.txt           # Python dependencies
 │── README.md                  # Project documentation
 </pre>
