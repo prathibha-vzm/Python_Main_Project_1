@@ -1,0 +1,56 @@
+{
+  "Url": {
+    "base_url": "https://www.guvi.in/"
+  },
+  "Login_Button": {
+    "login": ["XPATH","//a[@id='login-btn']"]
+  },
+  "SignUp": {
+    "signup": ["XPATH","//a[@href='/register/']"]
+  },
+  "Signup_Url": {
+    "url": "https://www.guvi.in/register/"
+  },
+  "Signup_Element": {
+    "signup_element": ["XPATH","//h2[text()='Sign Up']"]
+  },
+  "Login_Link": {
+    "login": ["XPATH","//a[@class='login']"]
+  },
+  "Email_Field": {
+    "email": ["XPATH","//input[@id='email']"]
+  },
+  "Password_Field": {
+    "password": ["XPATH","//input[@id='password']"]
+  },
+  "Check_Box": {
+    "logged_in": ["XPATH","//input[@id='logged-in']"]
+  },
+  "Login_Element": {
+    "login_element": ["XPATH","//a[@class='btn login-btn']"]
+  },
+  "Dashboard_Element": {
+    "my_course": ["XPATH","//div[text()='My Courses ']"]
+  },
+  "Error_Message": {
+    "error_text": ["XPATH","//div[@class='invalid-feedback']"]
+  },
+  "Menu_Course": {
+    "courses": ["XPATH","//div[@class='⭐rwl3jt-0 hidden lg:flex basis-auto']//a[text()='Courses']"]
+  },
+  "Menu_Live_Class": {
+    "live_class": ["XPATH","//div[@id='liveclasses']//p[text()='LIVE Classes']"]
+  },
+  "Menu_Practice": {
+    "practice": ["XPATH","//div[@id='practices']//p[text()='Practice']"]
+  },
+  "Dobby": {
+    "dobby_chatbot": ["XPATH","//div[@id='ym-auto-pop-up-header']"]
+  },
+  "Drop_Down": {
+    "drop_down": ["XPATH","//div[@id='dropdown_title']"]
+  },
+  "Sign_Out": {
+    "sign_out": ["XPATH","(//ul[@id='drop_contents']//div[@id='dropdown_contents'])[3]"]
+  }
+}
