@@ -2,7 +2,7 @@
 # Project Architecture
 <pre>
 guvi_project/
-│── data/                       # Test data & locators
+│── data/                       # Test data
 │   ├── test_data.json          # UI element locators (XPATH, URL)
 |
 │── pages/                     # Page Object classes
