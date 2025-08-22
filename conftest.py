@@ -23,6 +23,8 @@ def driver(request):
         service = ChromeService(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service)
     elif browser == "edge":
+        # Can Manually give the path as well to msedgedriver.exe 
+        # service = EdgeService(r"C:...\PycharmProjects\edgedriver_win32\msedgedriver.exe")
         service = EdgeService(EdgeChromiumDriverManager().install())
         driver = webdriver.Edge(service=service)
     else:
@@ -128,3 +130,4 @@ def read_drop_down():
 @pytest.fixture(scope="session")
 def read_sign_out():
     return read_test_data()["Sign_Out"]["sign_out"]
+
