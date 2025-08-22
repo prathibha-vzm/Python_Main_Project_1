@@ -1,5 +1,6 @@
-selenium
-pytest
-pytest-bdd
-webdriver-manager
-allure-pytest
+selenium==4.35.0
+pytest==8.4.1
+pytest-bdd==8.1.0
+webdriver-manager==4.0.2
+allure-pytest==2.15.0
+
