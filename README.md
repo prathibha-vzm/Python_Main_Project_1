@@ -49,6 +49,7 @@ guvi_project/
 . Console logs for better debugging
 
 # Usage
+<pre><code>pytest tests/step_def/test_guvi_home.py -m smoke_test --browser=chrome</code></pre>
 <pre><code>pytest tests/ --alluredir=allure-results -m smoke_test </code>
 <code>allure generate allure-results -o allure-report --clean</code>
 <code>allure open allure-report</code></pre>
