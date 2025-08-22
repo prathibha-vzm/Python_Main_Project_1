@@ -1,13 +1,33 @@
 # Importing Packages
 import json
 import os.path
+from sys import exception
+from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.edge.service import Service as EdgeService
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import pytest
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
-# Fixture to initialize and quit Chrome WebDriver
+# Add a command-line option "--browser" to pytest so we can choose the browser when running tests
+def pytest_addoption(parser):
+    parser.addoption("--browser", action="store", default="chrome")
+
+# Fixture to initialize and quit browser
 @pytest.fixture
-def driver():
-    driver=webdriver.Chrome()
+def driver(request):
+    # Get the browser name from command-line option
+    browser = request.config.getoption("--browser")
+    # This is to choose cross-browser
+    if browser == "chrome":
+        service = ChromeService(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service)
+    elif browser == "edge":
+        service = EdgeService(EdgeChromiumDriverManager().install())
+        driver = webdriver.Edge(service=service)
+    else:
+        print(f"Please pass the correct browser name: {browser}")
+        raise exception("Driver Not Found")
     driver.maximize_window()
     yield driver
     driver.quit()
