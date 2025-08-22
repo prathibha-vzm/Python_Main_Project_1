@@ -51,10 +51,17 @@ guvi_project/
 . Console logs for better debugging
 
 # Usage
+## To Install Dependencies
+<pre><code>pip install -r requirements.txt</code></pre>
+## To Create and Activate Virtual Environment
+<pre><code>python -m venv guvi_project</code>
+<code>./guvi_project/Scripts/activate</code></pre>
 ## To Run the Test in Cross Browser
+### To Run Test test_guvi_home in Chrome Browser
 <pre><code>pytest tests/step_def/test_guvi_home.py -m smoke_test --browser=chrome</code></pre>
+### To Run Test test_guvi_home in Edge Browser
 <pre><code>pytest tests/step_def/test_guvi_home.py -m smoke_test --browser=edge</code></pre>
-## To Run the Tests and Generate allure report
+## To Run the Tests, Generate allure report and Open Report in Browser
 <pre><code>pytest tests/ --alluredir=allure-results -m smoke_test </code>
 <code>allure generate allure-results -o allure-report --clean</code>
 <code>allure open allure-report</code></pre>
