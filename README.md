@@ -29,7 +29,7 @@ guvi_project/
 │   ├── test_guvi_login.py   # Step definitions for login page
 │   └── test_menu_chatbot.py # Step definitions for menu/chatbot/logout
 │
-|── conftest.py              # contains pytest fixtures for driver, to read json data
+|── conftest.py              # contains pytest fixtures for driver, cross browser selection, to read json data
 |── pytest.ini               # conatins marker and path for feature
 │── requirements.txt           # Python dependencies
 │── README.md                  # Project documentation
