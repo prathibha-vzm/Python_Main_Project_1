@@ -22,8 +22,11 @@ class LoginPage(BasePage):
             )
             if username_locator.is_displayed():
                 username_locator.clear()
-                username_locator.send_keys(username)
-                print("Entered username")
+                if username:
+                   username_locator.send_keys(username)
+                   print("Entered username")
+                else:
+                    print("No Username")
             else:
                 print("Username Field Not Displayed / is Filled")
         # Handled Exceptions
@@ -43,8 +46,11 @@ class LoginPage(BasePage):
             )
             if password_locator.is_displayed():
                 password_locator.clear()
-                password_locator.send_keys(password)
-                print("Entered Password")
+                if password:
+                   password_locator.send_keys(password)
+                   print("Entered Password")
+                else:
+                    print("No Password")
             else:
                 print("Password Field Not Displayed / is Filled")
         # handled Exceptions
@@ -126,4 +132,5 @@ class LoginPage(BasePage):
         except NoSuchElementException:
             print("No Error Message")
         except TimeoutException:
+
             print("Error Time Out")
